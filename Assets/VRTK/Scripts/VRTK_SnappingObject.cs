@@ -32,7 +32,10 @@ namespace VRTK
                 Debug.Log("hey");
                 this.transform.localPosition = attachPoint;
                 this.transform.localRotation = new Quaternion(0f, 0f, 0f, 0f);
-
+                this.isGrabbable = false;
+                Rigidbody rigidbody = this.GetComponent<Rigidbody>();
+                rigidbody.useGravity = false;
+                rigidbody.isKinematic = true;
             }
 
         }
