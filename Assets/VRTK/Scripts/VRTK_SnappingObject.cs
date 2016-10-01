@@ -8,6 +8,8 @@ namespace VRTK
 
     public class VRTK_SnappingObject : VRTK_InteractableObject
     {
+        public float detachThreshold = 1000f;
+
         //final attach point of object
         public Vector3 attachPoint = new Vector3(0f, 0f, 0f);
         public string attachTo = "Nothing";
