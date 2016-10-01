@@ -1,17 +1,21 @@
 fileFormatVersion: 2
-guid: 5a5393914b3097643b56eaa0e223af13
-timeCreated: 1469087502
-licenseType: Store
+guid: bc12b79d3734f0b4aa8d04f3087d00c8
+timeCreated: 1475344252
+licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: prism
-    400000: //RootNode
-    400002: prism
-    2300000: prism
-    3300000: prism
-    4300000: prism
+    100000: Camera
+    100002: Lamp
+    100004: Power Supply
+    100006: //RootNode
+    400000: Camera
+    400002: Lamp
+    400004: Power Supply
+    400006: //RootNode
+    2300000: Power Supply
+    3300000: Power Supply
+    4300000: Power Supply
   materials:
     importMaterials: 1
     materialName: 0
@@ -19,7 +23,7 @@ ModelImporter:
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
-    resampleRotations: 1
+    resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
     animationImportErrors: 
