@@ -1,4 +1,12 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/VRTK/Examples/034_Controls_InteractingWithUnityUI.unity
+=======
+<<<<<<< HEAD
+- path: Assets/Scenes/Workspace.unity
+=======
+- path: Assets/Scenes/UI Test.unity
+>>>>>>> 1c63ce5ae023a3588aa3b9069058e0974e8c1971
+>>>>>>> 977bf0fac6570279510565a621eb2e40f022ef69
   isLoaded: 1
   isActive: 1
