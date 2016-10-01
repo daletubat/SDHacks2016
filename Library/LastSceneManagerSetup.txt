@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/VRTK/Examples/005_Controller_BasicObjectGrabbing.unity
+- path: Assets/Scenes/UI Test.unity
   isLoaded: 1
   isActive: 1
