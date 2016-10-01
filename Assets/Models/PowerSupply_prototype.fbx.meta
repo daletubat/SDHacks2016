@@ -14,7 +14,9 @@ ModelImporter:
     400004: Power Supply
     400006: //RootNode
     2300000: Power Supply
+    2300002: //RootNode
     3300000: Power Supply
+    3300002: //RootNode
     4300000: Power Supply
   materials:
     importMaterials: 1
