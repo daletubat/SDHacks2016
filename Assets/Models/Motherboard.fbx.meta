@@ -1,22 +1,22 @@
 fileFormatVersion: 2
-guid: 950854b0e5850734db12d3c0e448f52b
-timeCreated: 1467286816
-licenseType: Store
+guid: 50567acad366a114abc8fc0c2ef32f07
+timeCreated: 1475343890
+licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: beam
-    100002: beam_in
-    100004: //RootNode
-    400000: beam
-    400002: beam_in
-    400004: //RootNode
-    2300000: beam
-    2300002: beam_in
-    3300000: beam
-    3300002: beam_in
-    4300000: beam
-    4300002: beam_in
+    100000: //RootNode
+    100002: Motherboard
+    100004: Motherboard.001
+    400000: //RootNode
+    400002: Motherboard
+    400004: Motherboard.001
+    2300000: Motherboard
+    2300002: Motherboard.001
+    3300000: Motherboard
+    3300002: Motherboard.001
+    4300000: Motherboard
+    4300002: Motherboard.001
   materials:
     importMaterials: 1
     materialName: 0
@@ -24,7 +24,7 @@ ModelImporter:
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
-    resampleRotations: 1
+    resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
     animationImportErrors: 
