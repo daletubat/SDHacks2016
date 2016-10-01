@@ -36,30 +36,43 @@ namespace VRTK
                 Rigidbody rigidbody = this.GetComponent<Rigidbody>();
                 rigidbody.useGravity = false;
                 rigidbody.isKinematic = true;
+
+                collidingObj.GetComponent<Renderer>().material.color = Color.blue;
+                this.enabled = false;
             }
 
         }
 
         void OnTriggerEnter(Collider collider) {
 
-            string checkAttach = collider.gameObject.name;
-            if(checkAttach == attachTo)
+            if (enabled)
             {
-                colliding = true;
-                collidingObj = collider.gameObject;
+
+                string checkAttach = collider.gameObject.name;
+                if (checkAttach == attachTo)
+                {
+                    colliding = true;
+                    collidingObj = collider.gameObject;
+                    collidingObj.gameObject.GetComponent<Renderer>().material.color = Color.green;
+                }
+                else
+                {
+                    colliding = false;
+                    collidingObj = collider.gameObject;
+                    collidingObj.gameObject.GetComponent<Renderer>().material.color = Color.red;
+                }
+
 
             }
-            else
-            {
-                colliding = false;
-            }
-
         }
 
         void OnTriggerExit(Collider collider)
         {
-            colliding = false;
-
+            if (enabled)
+            {
+                collider.gameObject.GetComponent<Renderer>().material.color = Color.blue;
+                colliding = false;
+            }
         }
 
 
