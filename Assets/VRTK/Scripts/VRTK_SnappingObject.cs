@@ -33,6 +33,7 @@ namespace VRTK
             
             Collider collider = previousGrabbingObject.GetComponent(typeof(Collider)) as Collider;
 
+            //Debug.Log("Colliding CHECK: "+ colliding);
             if (colliding)
             {
                 this.transform.parent = collidingObj.transform.parent.gameObject.transform;
@@ -53,6 +54,7 @@ namespace VRTK
                     //renderer.material.color = Color.blue;
                 this.enabled = false;
                 workspaceStory.ungrabbed(previousGrabbingObject);
+
             }
 
  
@@ -68,6 +70,7 @@ namespace VRTK
                 string checkAttach = collider.gameObject.name;
                 if (checkAttach == attachTo)
                 {
+                    //Debug.Log("Colliding true");
                     colliding = true;
                     collidingObj = collider.gameObject;
 
@@ -76,7 +79,7 @@ namespace VRTK
                     {
                         this.Ungrabbed(this.gameObject);
                     }
-                    else if (renderer != null && (checkAttach == attachTo || checkAttach == cannotAttachTo))
+                    else if (renderer != null)
                     {
                         renderer.enabled = true;
                         renderer.material.color = Color.green;
@@ -85,8 +88,8 @@ namespace VRTK
                 }
                 else
                 {
-                    colliding = false;
-                    collidingObj = collider.gameObject;
+                    //colliding = false;
+                    //collidingObj = collider.gameObject;
                     if(renderer != null && (checkAttach == attachTo || checkAttach == cannotAttachTo))
                         renderer.material.color = Color.red;
                 }
@@ -98,14 +101,16 @@ namespace VRTK
         void OnTriggerExit(Collider collider)
         {
             Renderer renderer = collider.gameObject.GetComponent<Renderer>();
-            if (enabled && this.IsGrabbed())
+            string checkAttach = collider.gameObject.name;
+            if (enabled && this.IsGrabbed() && checkAttach == attachTo)
             {
-                string checkAttach = collider.gameObject.name;
+                
                 if (renderer != null && (checkAttach == attachTo || checkAttach == cannotAttachTo))
                 {
                     renderer.enabled = false;
                 }
-                    //renderer.material.EnableKeyword("_ALPHAPREMULTIPLY_ON");
+                //renderer.material.EnableKeyword("_ALPHAPREMULTIPLY_ON");
+                //Debug.Log("Colliding false");
                 colliding = false;
             }
         }

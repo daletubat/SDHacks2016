@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Workspace_Story : MonoBehaviour {
-
+    public GameObject Monitor;
     // Use this for initialization
     public int curr_state = 0;
 
@@ -15,14 +15,14 @@ public class Workspace_Story : MonoBehaviour {
 	public void ungrabbed(GameObject previousGrabbingObject)
     {
         Debug.Log("Debug");
+        VRTK.VRTK_SnappingObject snappingObject = previousGrabbingObject.GetComponent<VRTK.VRTK_SnappingObject>();
 
-        switch (curr_state)
+        switch (curr_state++)
         {
             case 0: // motherboard attached to table
-
                 break;
 
-            case 1: // cpu attached to motherboard
+            case 1: // cpu attached to motherboard; snappingObject = cpu
                 break;
             case 2: // fan attached to cpu
                 break;
@@ -31,7 +31,6 @@ public class Workspace_Story : MonoBehaviour {
                 break;
             case 4: // case attached to table
                 // unsnap motherboard
-                VRTK.VRTK_SnappingObject snappingObject = previousGrabbingObject.GetComponent<VRTK.VRTK_SnappingObject>();
                 snappingObject.attachTo = "caseSnap";
                 snappingObject.attachPoint = new Vector3(0.0048f, 0.009f, 0f);
                 snappingObject.attachRotation = new Vector3(180, 90, 0);
@@ -51,6 +50,8 @@ public class Workspace_Story : MonoBehaviour {
             case 9:
                 break;
         }
+
+        Debug.Log("State is now: " + curr_state);
     }
 	// Update is called once per frame
 	void Update () {
