@@ -69,7 +69,10 @@ public class UIActions : MonoBehaviour {
         }
     }
    
+    public void onBackClick(Button button)
+    {
 
+    }
 
     //public void SpawnCPU()
     //{
