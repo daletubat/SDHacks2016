@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 
+// PARTS: CPU Cooler, Harddrive, Fans
 public class UIActions : MonoBehaviour {
 
     public GameObject[] pcParts;
@@ -24,9 +25,55 @@ public class UIActions : MonoBehaviour {
         }
     }
 
+    // runs through UI
+    public void OnCategoryClick(Button button)
+    {
+
+        GameObject scrollview = GameObject.Find("Scroll View");
+        GameObject categories = GameObject.Find("Menu Title").transform.Find("Categories").gameObject;
+        Debug.Log(button.name);
+        GameObject partPicker = categories.transform.Find(button.name + " Parts").gameObject;
+       
+        if (scrollview == null)
+        {
+            Debug.Log("Scroll view could not be found");
+            return;
+        }
+  
+        else
+        {
+            scrollview.SetActive(false);
+
+        }
+
+        if (categories == null)
+        {
+            Debug.Log("Could not find categories");
+            return;
+        }
+
+        else
+        {
+            categories.SetActive(true);
+        }
+
+        if (partPicker == null)
+        {
+            Debug.Log("Could not find the Part category of " + this.name);
+            return;
+        }
+
+        else
+        {
+            partPicker.SetActive(true);
+        }
+    }
+   
+
+
     //public void SpawnCPU()
     //{
-        
+
     //}
 
     //public void SpawnGPU()
