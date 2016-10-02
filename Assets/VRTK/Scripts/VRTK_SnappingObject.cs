@@ -6,8 +6,10 @@ namespace VRTK
     using System.Collections.Generic;
     using Highlighters;
 
+
     public class VRTK_SnappingObject : VRTK_InteractableObject
     {
+
 
         //final attach point of object
         public Vector3 attachPoint = new Vector3(0f, 0f, 0f);
@@ -16,7 +18,9 @@ namespace VRTK
         public Vector3 attachRotation = new Vector3(0f, 0f, 0f);
         private bool colliding = false;
         private GameObject collidingObj;
+        public Workspace_Story workspaceStory;
 
+        public bool snapOnDrop = false;
     
 
         /// <summary>
@@ -48,14 +52,17 @@ namespace VRTK
                 }
                     //renderer.material.color = Color.blue;
                 this.enabled = false;
+                workspaceStory.ungrabbed(previousGrabbingObject);
             }
+
+ 
 
         }
 
         void OnTriggerEnter(Collider collider) {
             Renderer renderer = collider.gameObject.GetComponent<Renderer>();
 
-            if (enabled)
+            if ((enabled && this.IsGrabbed()) || snapOnDrop)
             {
 
                 string checkAttach = collider.gameObject.name;
@@ -65,8 +72,11 @@ namespace VRTK
                     collidingObj = collider.gameObject;
 
                     
-
-                    if (renderer != null && (checkAttach == attachTo || checkAttach == cannotAttachTo))
+                    if (snapOnDrop && !this.IsGrabbed())
+                    {
+                        this.Ungrabbed(this.gameObject);
+                    }
+                    else if (renderer != null && (checkAttach == attachTo || checkAttach == cannotAttachTo))
                     {
                         renderer.enabled = true;
                         renderer.material.color = Color.green;
@@ -88,7 +98,7 @@ namespace VRTK
         void OnTriggerExit(Collider collider)
         {
             Renderer renderer = collider.gameObject.GetComponent<Renderer>();
-            if (enabled)
+            if (enabled && this.IsGrabbed())
             {
                 string checkAttach = collider.gameObject.name;
                 if (renderer != null && (checkAttach == attachTo || checkAttach == cannotAttachTo))
