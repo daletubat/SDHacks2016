@@ -8,9 +8,11 @@ namespace VRTK
 
     public class VRTK_SnappingObject : VRTK_InteractableObject
     {
+
         //final attach point of object
         public Vector3 attachPoint = new Vector3(0f, 0f, 0f);
         public string attachTo = "Nothing";
+        public Vector3 attachRotation = new Vector3(0f, 0f, 0f);
         private bool colliding = false;
         private GameObject collidingObj;
 
@@ -28,22 +30,27 @@ namespace VRTK
 
             if (colliding)
             {
-                this.transform.parent = collidingObj.transform;
-                Debug.Log("hey");
+                this.transform.parent = collidingObj.transform.parent.gameObject.transform;
+                Debug.Log(this.transform.localRotation);
+
                 this.transform.localPosition = attachPoint;
-                this.transform.localRotation = new Quaternion(0f, 0f, 0f, 0f);
+                this.transform.localEulerAngles = attachRotation;
                 this.isGrabbable = false;
                 Rigidbody rigidbody = this.GetComponent<Rigidbody>();
                 rigidbody.useGravity = false;
                 rigidbody.isKinematic = true;
 
-                collidingObj.GetComponent<Renderer>().material.color = Color.blue;
+
+                Renderer renderer = collidingObj.GetComponent<Renderer>();
+                //if (renderer != null)
+                    //renderer.material.color = Color.blue;
                 this.enabled = false;
             }
 
         }
 
         void OnTriggerEnter(Collider collider) {
+            Renderer renderer = collider.gameObject.GetComponent<Renderer>();
 
             if (enabled)
             {
@@ -53,13 +60,15 @@ namespace VRTK
                 {
                     colliding = true;
                     collidingObj = collider.gameObject;
-                    collidingObj.gameObject.GetComponent<Renderer>().material.color = Color.green;
+                    //if (renderer != null)
+                        //renderer.material.color = Color.green;
                 }
                 else
                 {
                     colliding = false;
                     collidingObj = collider.gameObject;
-                    collidingObj.gameObject.GetComponent<Renderer>().material.color = Color.red;
+                    //if(renderer != null)
+                        //renderer.material.color = Color.red;
                 }
 
 
@@ -68,9 +77,11 @@ namespace VRTK
 
         void OnTriggerExit(Collider collider)
         {
+            Renderer renderer = collider.gameObject.GetComponent<Renderer>();
             if (enabled)
             {
-                collider.gameObject.GetComponent<Renderer>().material.color = Color.blue;
+                if (renderer != null)
+                    //renderer.material.color = Color.blue;
                 colliding = false;
             }
         }
