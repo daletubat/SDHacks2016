@@ -12,6 +12,7 @@ namespace VRTK
         //final attach point of object
         public Vector3 attachPoint = new Vector3(0f, 0f, 0f);
         public string attachTo = "Nothing";
+        public string cannotAttachTo = "";
         public Vector3 attachRotation = new Vector3(0f, 0f, 0f);
         private bool colliding = false;
         private GameObject collidingObj;
@@ -42,7 +43,9 @@ namespace VRTK
 
 
                 Renderer renderer = collidingObj.GetComponent<Renderer>();
-                //if (renderer != null)
+                if (renderer != null) {
+                    renderer.enabled = false;
+                }
                     //renderer.material.color = Color.blue;
                 this.enabled = false;
             }
@@ -60,15 +63,22 @@ namespace VRTK
                 {
                     colliding = true;
                     collidingObj = collider.gameObject;
-                    //if (renderer != null)
-                        //renderer.material.color = Color.green;
+
+                    
+
+                    if (renderer != null && (checkAttach == attachTo || checkAttach == cannotAttachTo))
+                    {
+                        renderer.enabled = true;
+                        renderer.material.color = Color.green;
+                    }
+                        
                 }
                 else
                 {
                     colliding = false;
                     collidingObj = collider.gameObject;
-                    //if(renderer != null)
-                        //renderer.material.color = Color.red;
+                    if(renderer != null && (checkAttach == attachTo || checkAttach == cannotAttachTo))
+                        renderer.material.color = Color.red;
                 }
 
 
@@ -80,8 +90,12 @@ namespace VRTK
             Renderer renderer = collider.gameObject.GetComponent<Renderer>();
             if (enabled)
             {
-                if (renderer != null)
-                    //renderer.material.color = Color.blue;
+                string checkAttach = collider.gameObject.name;
+                if (renderer != null && (checkAttach == attachTo || checkAttach == cannotAttachTo))
+                {
+                    renderer.enabled = false;
+                }
+                    //renderer.material.EnableKeyword("_ALPHAPREMULTIPLY_ON");
                 colliding = false;
             }
         }
