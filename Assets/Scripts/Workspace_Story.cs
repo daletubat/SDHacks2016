@@ -79,13 +79,19 @@ public class Workspace_Story : MonoBehaviour {
             case 7:
                 if (previousGrabbingObject.name != "GTX1080") { return; }
                 GameObject.Find("PartsQueue").transform.FindChild("PowerSupply").gameObject.SetActive(true);
-                monitorController.showSlide(8);
+                monitorController.showSlide(8); 
                 break;
             case 8:
                 monitorController.showSlide(9);
                 break;
             case 9:
+                monitorController.showSlide(10);
+                GameObject.Find("Case").transform.localPosition = new Vector3(0.06f, 0.3f, -0.55f);
+                GameObject.Find("Case").transform.localEulerAngles = new Vector3(0f, 0f, 180f);
+                //GameObject.Find("Case").GetComponent<Rigidbody>().isKinematic = true;
+                GameObject.Find("Case").GetComponent<Rotating>().IsRotating = true;
                 break;
+    
         }
 
         curr_state++;

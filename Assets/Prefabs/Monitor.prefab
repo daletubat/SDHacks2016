@@ -28,6 +28,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!1 &1000010175362774
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 224000013715349138}
+  - 222: {fileID: 222000014212501156}
+  - 114: {fileID: 114000010567231708}
+  m_Layer: 5
+  m_Name: PSU Instruction Heading
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1000010666508468
 GameObject:
   m_ObjectHideFlags: 0
@@ -114,6 +131,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1000011275496872
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 224000013090593104}
+  - 222: {fileID: 222000010308372658}
+  - 114: {fileID: 114000010985809892}
+  m_Layer: 5
+  m_Name: Instruction Panel 9
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
 --- !u!1 &1000011366341522
 GameObject:
   m_ObjectHideFlags: 0
@@ -159,7 +193,7 @@ GameObject:
   - 222: {fileID: 222000010286468030}
   - 114: {fileID: 114000012214699006}
   m_Layer: 5
-  m_Name: Instruction Panel 9
+  m_Name: Instruction Panel 10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -244,7 +278,7 @@ GameObject:
   - 222: {fileID: 222000011474153916}
   - 114: {fileID: 114000010095806610}
   m_Layer: 5
-  m_Name: PSU Instruction Heading
+  m_Name: Ending Heading
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -397,7 +431,24 @@ GameObject:
   - 222: {fileID: 222000010544835568}
   - 114: {fileID: 114000011992816880}
   m_Layer: 5
-  m_Name: PSU Instruction Text
+  m_Name: Image Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1000012875663912
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 224000012443736972}
+  - 222: {fileID: 222000011897603098}
+  - 114: {fileID: 114000010335431314}
+  m_Layer: 5
+  m_Name: PSU Component Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -414,7 +465,7 @@ GameObject:
   - 222: {fileID: 222000011262766278}
   - 114: {fileID: 114000012024506546}
   m_Layer: 5
-  m_Name: PSU Component Image
+  m_Name: Ending Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -517,6 +568,23 @@ GameObject:
   - 114: {fileID: 114000011426376404}
   m_Layer: 5
   m_Name: Motherboard Instruction Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1000013488240834
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 224000011977781948}
+  - 222: {fileID: 222000012446269278}
+  - 114: {fileID: 114000014225178004}
+  m_Layer: 5
+  m_Name: PSU Instruction Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -711,7 +779,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: The PSU
+  m_Text: congrats!
 --- !u!114 &114000010270645142
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -762,8 +830,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33f91861e91eb574b9922e875faa4a21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NUMSLIDES: 9
+  NUMSLIDES: 10
   currentActiveSlide: {fileID: 1000012233786562}
+--- !u!114 &114000010335431314
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012875663912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -98529514, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Texture: {fileID: 2800000, guid: 0605f31e7804c8e448d7886232dae888, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
 --- !u!114 &114000010539789546
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -797,6 +891,39 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: The GPU
+--- !u!114 &114000010567231708
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010175362774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 62246e7b38d87e748a21824ab22e508d, type: 3}
+    m_FontSize: 80
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 0
+    m_MaxSize: 80
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: The PSU
 --- !u!114 &114000010672708174
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -939,6 +1066,33 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
+--- !u!114 &114000010985809892
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011275496872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
 --- !u!114 &114000011127542980
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1036,8 +1190,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33f91861e91eb574b9922e875faa4a21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NUMSLIDES: 8
-  currentActiveSlide: {fileID: 0}
+  NUMSLIDES: 10
+  currentActiveSlide: {fileID: 1000012233786562}
 --- !u!114 &114000011426376404
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1136,15 +1290,16 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '"Power supply unit"
-
-    provides power to the computer
+  m_Text: 'We''ve successfully tested you can follow instructions
 
 
+    coming soon:
 
-    Place in the case
+    more customizations
 
-    & wire to the motherboard'
+    more components
+
+    more explosions'
 --- !u!114 &114000012020529296
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1191,7 +1346,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Texture: {fileID: 2800000, guid: 0605f31e7804c8e448d7886232dae888, type: 3}
+  m_Texture: {fileID: 2800000, guid: 6560b11f00030a648b1075c01787e58b, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1257,8 +1412,16 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Harddrive, SSD, etc.\nLong term memory storage\n\n\n\nplace in the case
-    \n& wire to the Motherboard"
+  m_Text: 'Harddrive, SSD, etc.
+
+    Long term memory storage
+
+
+
+
+    place in the case
+
+    in smaller slots'
 --- !u!114 &114000012367404570
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1326,7 +1489,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'maintains optimal performance
 
-    CPU can overheat
+    prevents CPU from overheating
 
 
 
@@ -1839,9 +2002,46 @@ MonoBehaviour:
     Protects components from dust
 
 
-    Place on the work table
+    Place on the work table'
+--- !u!114 &114000014225178004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013488240834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 6a06538fad3b3dc4ca1bfd573bf8fc07, type: 3}
+    m_FontSize: 70
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 80
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: '"Power supply unit"
 
-    & move the Motherboard and co. into the case'
+    provides power to the computer
+
+
+
+    Place in the case'
 --- !u!222 &222000010119269630
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -1860,6 +2060,12 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011649352672}
+--- !u!222 &222000010308372658
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011275496872}
 --- !u!222 &222000010330943858
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -1968,6 +2174,12 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013162040200}
+--- !u!222 &222000011897603098
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012875663912}
 --- !u!222 &222000011960043524
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -1980,6 +2192,12 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013479253386}
+--- !u!222 &222000012446269278
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013488240834}
 --- !u!222 &222000012459048974
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -2040,6 +2258,12 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013796874680}
+--- !u!222 &222000014212501156
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010175362774}
 --- !u!222 &222000014242099542
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -2135,6 +2359,7 @@ RectTransform:
   - {fileID: 224000012742394786}
   - {fileID: 224000012854388480}
   - {fileID: 224000013020947494}
+  - {fileID: 224000013090593104}
   - {fileID: 224000012290811884}
   - {fileID: 224000010980738480}
   m_Father: {fileID: 0}
@@ -2159,8 +2384,8 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -487.5, y: -70.99999}
-  m_SizeDelta: {x: -1022.8, y: -338}
+  m_AnchoredPosition: {x: -487.5, y: -33.034985}
+  m_SizeDelta: {x: -1022.8, y: -413.92993}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224000010320702064
 RectTransform:
@@ -2246,7 +2471,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 224000010218955262}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -2342,6 +2567,24 @@ RectTransform:
   m_AnchoredPosition: {x: -487.5, y: -70.99999}
   m_SizeDelta: {x: -1022.8, y: -338}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &224000011977781948
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013488240834}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 224000013090593104}
+  m_RootOrder: 2
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 305, y: -115}
+  m_SizeDelta: {x: -650, y: -270}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224000011997668852
 RectTransform:
   m_ObjectHideFlags: 1
@@ -2404,18 +2647,36 @@ RectTransform:
   m_GameObject: {fileID: 1000011649352672}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9999996, y: 1, z: 0.9999996}
+  m_LocalScale: {x: 0.999999, y: 1, z: 0.999999}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 224000011112661548}
   - {fileID: 224000010220905858}
   - {fileID: 224000010703861696}
   m_Father: {fileID: 224000010218955262}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0.00000011920929, y: -0.00003707409}
   m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &224000012443736972
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012875663912}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 224000013090593104}
+  m_RootOrder: 1
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -487.5, y: -70.99999}
+  m_SizeDelta: {x: -1022.8, y: -338}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224000012542742446
 RectTransform:
@@ -2606,6 +2867,27 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &224000013090593104
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011275496872}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.9999996, y: 1, z: 0.9999996}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 224000013715349138}
+  - {fileID: 224000012443736972}
+  - {fileID: 224000011977781948}
+  m_Father: {fileID: 224000010218955262}
+  m_RootOrder: 8
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224000013261913802
 RectTransform:
   m_ObjectHideFlags: 1
@@ -2680,6 +2962,24 @@ RectTransform:
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -487.5, y: -70.99999}
   m_SizeDelta: {x: -1022.8, y: -338}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &224000013715349138
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010175362774}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 224000013090593104}
+  m_RootOrder: 0
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.0000009536743, y: 350.33}
+  m_SizeDelta: {x: -40, y: -740.66}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224000013892028186
 RectTransform:

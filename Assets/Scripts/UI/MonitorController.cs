@@ -4,7 +4,7 @@ using System.Collections;
 public class MonitorController : MonoBehaviour {
 
     private GameObject[] slides;
-    public int NUMSLIDES = 8;
+    public int NUMSLIDES = 10;
     public GameObject currentActiveSlide = null;
 
 	// Use this for initialization
