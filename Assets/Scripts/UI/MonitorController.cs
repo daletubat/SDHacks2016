@@ -14,7 +14,7 @@ public class MonitorController : MonoBehaviour {
 
         for (int i = 0; i <  NUMSLIDES; i++)
         {
-            slides[i] = GameObject.Find("Canvas").transform.Find("Instruction Panel " + (i + 1)).gameObject;
+            slides[i] = GameObject.Find("Monitor").transform.Find("Instruction Panel " + (i + 1)).gameObject;
         }
 	}
 	
