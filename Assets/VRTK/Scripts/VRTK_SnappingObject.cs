@@ -53,7 +53,10 @@ namespace VRTK
                 }
                     //renderer.material.color = Color.blue;
                 this.enabled = false;
-                workspaceStory.ungrabbed(previousGrabbingObject);
+
+                Debug.Log("REAL");
+                workspaceStory.ungrabbed(this.gameObject);
+                colliding = false;
 
             }
 
@@ -72,11 +75,13 @@ namespace VRTK
                 {
                     //Debug.Log("Colliding true");
                     colliding = true;
-                    collidingObj = collider.gameObject;
-
                     
+                    collidingObj = collider.gameObject;
+                    Debug.Log("SETTING: " + collidingObj.name + "   on    "  + this.name);
+
                     if (snapOnDrop && !this.IsGrabbed())
                     {
+                        Debug.Log("HACK");
                         this.Ungrabbed(this.gameObject);
                     }
                     else if (renderer != null)
